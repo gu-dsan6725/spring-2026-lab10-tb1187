@@ -22,6 +22,8 @@ from strands.telemetry import StrandsTelemetry
 from tools import (
     duckduckgo_search,
     get_directions,
+    get_exchange_rate,
+    get_current_time,
     get_weather,
 )
 
@@ -106,7 +108,7 @@ def _create_agent() -> Agent:
     Returns:
         Configured Agent instance
     """
-    logger.info("Creating Strands agent with search, weather, and directions tools")
+    logger.info("Creating Strands agent with search, weather, directions, timezone, and currency tools")
 
     tracer_provider = _setup_observability()
     telemetry = StrandsTelemetry(tracer_provider=tracer_provider)
@@ -126,7 +128,7 @@ def _create_agent() -> Agent:
     agent = Agent(
         system_prompt=system_prompt,
         model=model,
-        tools=[duckduckgo_search, get_weather, get_directions]
+        tools=[duckduckgo_search, get_weather, get_directions, get_current_time, get_exchange_rate]
     )
 
     logger.info("Agent created successfully")
