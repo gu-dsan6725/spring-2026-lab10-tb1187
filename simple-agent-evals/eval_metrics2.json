@@ -1,0 +1,200 @@
+{
+  "total_cases": 9,
+  "errors": 0,
+  "overall_scores": {
+    "Latency": {
+      "average": 0.9722,
+      "min": 0.75,
+      "max": 1.0,
+      "count": 9
+    },
+    "NoError": {
+      "average": 1.0,
+      "min": 1,
+      "max": 1,
+      "count": 9
+    },
+    "ResponseCompleteness": {
+      "average": 0.5833,
+      "min": 0.25,
+      "max": 1.0,
+      "count": 3
+    },
+    "ScopeAwareness": {
+      "average": 0.8889,
+      "min": 0,
+      "max": 1,
+      "count": 9
+    },
+    "ToolSelection": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "count": 9
+    }
+  },
+  "per_category": {
+    "currency": {
+      "Latency": {
+        "average": 1.0,
+        "count": 3
+      },
+      "NoError": {
+        "average": 1.0,
+        "count": 3
+      },
+      "ScopeAwareness": {
+        "average": 1.0,
+        "count": 3
+      },
+      "ToolSelection": {
+        "average": 1.0,
+        "count": 3
+      }
+    },
+    "multi_tool": {
+      "Latency": {
+        "average": 0.9167,
+        "count": 3
+      },
+      "NoError": {
+        "average": 1.0,
+        "count": 3
+      },
+      "ResponseCompleteness": {
+        "average": 0.5833,
+        "count": 3
+      },
+      "ScopeAwareness": {
+        "average": 0.6667,
+        "count": 3
+      },
+      "ToolSelection": {
+        "average": 1.0,
+        "count": 3
+      }
+    },
+    "timezone": {
+      "Latency": {
+        "average": 1.0,
+        "count": 3
+      },
+      "NoError": {
+        "average": 1.0,
+        "count": 3
+      },
+      "ScopeAwareness": {
+        "average": 1.0,
+        "count": 3
+      },
+      "ToolSelection": {
+        "average": 1.0,
+        "count": 3
+      }
+    }
+  },
+  "per_case": [
+    {
+      "input": "What time is it in Tokyo right now?",
+      "category": "timezone",
+      "scores": {
+        "ToolSelection": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "I have a call scheduled with a colleague in London. What time is it there currently?",
+      "category": "timezone",
+      "scores": {
+        "ToolSelection": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "I am traveling to Paris next week for a conference. What time is it there right now, and what is the current weather in ",
+      "category": "multi_tool",
+      "scores": {
+        "ToolSelection": 1.0,
+        "ResponseCompleteness": 0.5,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "How many euros will I get if I exchange 100 US dollars?",
+      "category": "currency",
+      "scores": {
+        "ToolSelection": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "What is the current exchange rate from British pounds to Japanese yen?",
+      "category": "currency",
+      "scores": {
+        "ToolSelection": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "I am moving abroad and need to transfer 2000 US dollars to Canadian dollars. What is today's exchange rate and how much ",
+      "category": "currency",
+      "scores": {
+        "ToolSelection": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "What time is it right now in Sydney and Los Angeles? I need to schedule a meeting between the two cities.",
+      "category": "timezone",
+      "scores": {
+        "ToolSelection": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "I am sending money to a friend in Germany. What time is it in Berlin right now, and what is the USD to EUR exchange rate",
+      "category": "multi_tool",
+      "scores": {
+        "ToolSelection": 1.0,
+        "ResponseCompleteness": 0.25,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "I am planning a business trip from New York to Tokyo. How long is the flight route by driving to JFK first, what is the ",
+      "category": "multi_tool",
+      "scores": {
+        "ToolSelection": 1.0,
+        "ResponseCompleteness": 1.0,
+        "Latency": 0.75,
+        "NoError": 1,
+        "ScopeAwareness": 0
+      },
+      "error": null
+    }
+  ]
+}

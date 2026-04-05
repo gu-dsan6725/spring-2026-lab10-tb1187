@@ -1,0 +1,65 @@
+[
+  {
+    "input": "What time is it in Tokyo right now?",
+    "expected_output": "The current local time in Tokyo, Japan in JST (UTC+09:00). The response should include the hour and minute and mention the JST timezone or +09:00 UTC offset.",
+    "expected_tools": ["get_current_time"],
+    "category": "timezone",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I have a call scheduled with a colleague in London. What time is it there currently?",
+    "expected_output": "The current local time in London, UK in either GMT (UTC+00:00) or BST (UTC+01:00) depending on the time of year. The response should include the hour and minute and mention the timezone.",
+    "expected_tools": ["get_current_time"],
+    "category": "timezone",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I am traveling to Paris next week for a conference. What time is it there right now, and what is the current weather in Paris?",
+    "expected_output": "The current local time in Paris in CET or CEST timezone, plus current Paris weather conditions including temperature in Fahrenheit and general conditions.",
+    "expected_tools": ["get_current_time", "get_weather"],
+    "category": "multi_tool",
+    "difficulty": "medium"
+  },
+  {
+    "input": "How many euros will I get if I exchange 100 US dollars?",
+    "expected_output": "The current USD to EUR exchange rate and the converted amount for 100 USD. The response should include a specific numeric exchange rate (roughly 0.85-0.95 EUR per USD) and the converted euro amount.",
+    "expected_tools": ["get_exchange_rate"],
+    "category": "currency",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What is the current exchange rate from British pounds to Japanese yen?",
+    "expected_output": "The current GBP to JPY exchange rate. The response should include a specific numeric rate (roughly 180-200 JPY per GBP) and mention the date the rate is from.",
+    "expected_tools": ["get_exchange_rate"],
+    "category": "currency",
+    "difficulty": "easy"
+  },
+  {
+    "input": "I am moving abroad and need to transfer 2000 US dollars to Canadian dollars. What is today's exchange rate and how much CAD will I receive?",
+    "expected_output": "The current USD to CAD exchange rate and the converted amount for 2000 USD. The response should include a specific rate (roughly 1.30-1.40 CAD per USD) and the total CAD amount (roughly 2600-2800 CAD).",
+    "expected_tools": ["get_exchange_rate"],
+    "category": "currency",
+    "difficulty": "easy"
+  },
+  {
+    "input": "What time is it right now in Sydney and Los Angeles? I need to schedule a meeting between the two cities.",
+    "expected_output": "The current local times in both Sydney (AEST/AEDT) and Los Angeles (PST/PDT), with enough information to understand the time difference between the two cities for scheduling purposes.",
+    "expected_tools": ["get_current_time"],
+    "category": "timezone",
+    "difficulty": "medium"
+  },
+  {
+    "input": "I am sending money to a friend in Germany. What time is it in Berlin right now, and what is the USD to EUR exchange rate today?",
+    "expected_output": "The current local time in Berlin in CET or CEST timezone, and the current USD to EUR exchange rate with the numeric value.",
+    "expected_tools": ["get_current_time", "get_exchange_rate"],
+    "category": "multi_tool",
+    "difficulty": "medium"
+  },
+  {
+    "input": "I am planning a business trip from New York to Tokyo. How long is the flight route by driving to JFK first, what is the current time in Tokyo, what is the weather there, what is the USD to JPY exchange rate, and what are the top business hotels in Shinjuku?",
+    "expected_output": "Driving directions from Manhattan to JFK Airport with distance and time, the current local time in Tokyo with timezone info, current Tokyo weather with temperature, the USD to JPY exchange rate, and a list of recommended business hotels in the Shinjuku area of Tokyo.",
+    "expected_tools": ["get_directions", "get_current_time", "get_weather", "get_exchange_rate", "duckduckgo_search"],
+    "category": "multi_tool",
+    "difficulty": "hard"
+  }
+]
